@@ -23,7 +23,7 @@ public:
 	std::shared_ptr<HashOperations<K, HK, HV>> opsForHash();
 
 	template<typename T>
-	T execute(std::function<T()> redisAction, bool exposeConnection);
+	T execute(std::function<T(RedisConnectionPtr)> redisAction, bool exposeConnection);
 
 };
 
@@ -46,9 +46,10 @@ std::shared_ptr<HashOperations<K, HK, HV>> RedisTemplate<K, V>::opsForHash()
 
 template<typename K, typename V>
 template<typename T>
-T RedisTemplate<K, V>::execute(std::function<T()> redisAction, bool exposeConnection)
+T RedisTemplate<K, V>::execute(std::function<T(RedisConnectionPtr)> redisAction, bool exposeConnection)
 {
-	return T();
+	std::cout << "REDIS_TEMPLATE execute" << std::endl;
+	return redisAction(nullptr);
 }
 
 NAMESPACE_VIVI_END

@@ -10,4 +10,6 @@
 #define THROW throw
 #define NOEXCEPT noexcept
 
+#include <iostream>
+
 #endif

@@ -11,6 +11,7 @@ class RedisConnection : public std::enable_shared_from_this<RedisConnection>, _V
 
 };
 
+using RedisConnectionPtr = std::shared_ptr<RedisConnection>;
 
 NAMESPACE_VIVI_END
 

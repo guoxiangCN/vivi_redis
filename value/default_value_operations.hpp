@@ -6,7 +6,6 @@
 #include "value_operations.hpp"
 
 #include <memory>
-#include <iostream>
 
 NAMESPACE_VIVI_BEGIN
 
@@ -27,8 +26,11 @@ public:
 
 	void set(K key, V value) override 
 	{
-		// return this->execute(T)
-		return this->execute(std::function<V(RedisConnection)>(), false);
+		std::function<V(RedisConnectionPtr)> redisAction = [](RedisConnectionPtr ptr)-> V {
+			std::cout << "call back RedisConnectionPtr  " << std::endl;
+			return V();
+		};
+		this->execute(redisAction, false);
 	}
 
 	void set(K key, V value, std::chrono::milliseconds timeout) override

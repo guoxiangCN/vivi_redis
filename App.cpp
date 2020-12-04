@@ -14,9 +14,16 @@ auto test() {
 
 int main(int argc, char** argv)
 {
+
+	std::function<void()> f = []() {
+
+	};
+
+
 	try {
-		auto x = test();
-		x->set("a", "b");
+		auto rawPtr = new RedisTemplate<std::string, std::string>();
+		std::shared_ptr<RedisTemplate<std::string, std::string>> redisTemplate(rawPtr);
+		redisTemplate->opsForValue()->set("a", "b");
 	}
 	catch (const std::exception& ex) {
 		std::cout << ex.what() << std::endl;

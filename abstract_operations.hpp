@@ -4,15 +4,15 @@
 #include "port.hpp"
 #include "vivi_exception.hpp"
 #include "redis_connection.hpp"
-#include "redis_template.hpp"
+// #include "redis_template.hpp"
 
 #include <memory>
 #include <functional>
 
 NAMESPACE_VIVI_BEGIN
 
-//template<typename K, typename V>
-//class RedisTemplate;
+template<typename K, typename V>
+class RedisTemplate;
 
 template<typename K, typename V>
 class AbsractOperations {
@@ -37,10 +37,13 @@ public:
 		return sharedPtr;
 	}
 
+	/*
+	 * Execute a RedisAction given.
+	 */
 	template<typename T>
-	T execute(std::function<T(RedisConnection)> redisAction, bool exposeConnection) {
-		// return this->getRedisTemplate()->execute(redisAction, exposeConnection);
-		return T();
+	T execute(std::function<T(RedisConnectionPtr)> redisAction, bool exposeConnection) {
+		auto rt = this->getRedisTemplate();
+		return rt->execute(redisAction, exposeConnection);
 	}
 
 
