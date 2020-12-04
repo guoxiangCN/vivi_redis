@@ -3,9 +3,9 @@
 
 #include "port.hpp"
 #include "noncopyable.hpp"
-#include "hash/hash_operations.hpp"
-#include "value/value_operations.hpp"
-#include "value/default_value_operations.hpp"
+#include "operations/hash_operations.hpp"
+#include "operations/value_operations.hpp"
+#include "operations/default_value_operations.hpp"
 
 #include <memory>
 #include <functional>
@@ -48,7 +48,6 @@ template<typename K, typename V>
 template<typename T>
 T RedisTemplate<K, V>::execute(std::function<T(RedisConnectionPtr)> redisAction, bool exposeConnection)
 {
-	std::cout << "REDIS_TEMPLATE execute" << std::endl;
 	return redisAction(nullptr);
 }
 

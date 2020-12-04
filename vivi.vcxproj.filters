@@ -24,22 +24,61 @@
     <ClInclude Include="noncopyable.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="value\value_operations.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="hash\hash_operations.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="abstract_operations.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="value\default_value_operations.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="vivi_exception.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="redis_connection.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_key_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_string_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_list_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_set_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_zset_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_hash_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_tx_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_pubsub_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_geo_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_hyperloglog_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\redis_scripting_commands.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\commands_defs.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\hash_operations.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\default_value_operations.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\value_operations.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

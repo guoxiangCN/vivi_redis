@@ -140,13 +140,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="abstract_operations.hpp" />
-    <ClInclude Include="hash\hash_operations.hpp" />
+    <ClInclude Include="commands\commands_defs.hpp" />
+    <ClInclude Include="commands\redis_commands.hpp" />
+    <ClInclude Include="commands\redis_geo_commands.hpp" />
+    <ClInclude Include="commands\redis_hash_commands.hpp" />
+    <ClInclude Include="commands\redis_hyperloglog_commands.hpp" />
+    <ClInclude Include="commands\redis_key_commands.hpp" />
+    <ClInclude Include="commands\redis_list_commands.hpp" />
+    <ClInclude Include="commands\redis_pubsub_commands.hpp" />
+    <ClInclude Include="commands\redis_scripting_commands.hpp" />
+    <ClInclude Include="commands\redis_set_commands.hpp" />
+    <ClInclude Include="commands\redis_string_commands.hpp" />
+    <ClInclude Include="commands\redis_tx_commands.hpp" />
+    <ClInclude Include="commands\redis_zset_commands.hpp" />
+    <ClInclude Include="operations\hash_operations.hpp" />
     <ClInclude Include="noncopyable.hpp" />
     <ClInclude Include="redis_connection.hpp" />
     <ClInclude Include="redis_template.hpp" />
     <ClInclude Include="port.hpp" />
-    <ClInclude Include="value\default_value_operations.hpp" />
-    <ClInclude Include="value\value_operations.hpp" />
+    <ClInclude Include="operations\default_value_operations.hpp" />
+    <ClInclude Include="operations\value_operations.hpp" />
     <ClInclude Include="vivi_exception.hpp" />
   </ItemGroup>
   <ItemGroup>

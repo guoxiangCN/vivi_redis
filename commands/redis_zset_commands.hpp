@@ -1,0 +1,6 @@
+#ifndef __VIVI_REDIS_ZSET_COMMANDS_HPP__
+#define __VIVI_REDIS_ZSET_COMMANDS_HPP__
+
+
+
+#endif
