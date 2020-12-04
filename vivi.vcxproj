@@ -153,6 +153,7 @@
     <ClInclude Include="commands\redis_string_commands.hpp" />
     <ClInclude Include="commands\redis_tx_commands.hpp" />
     <ClInclude Include="commands\redis_zset_commands.hpp" />
+    <ClInclude Include="operations\geo_operations.hpp" />
     <ClInclude Include="operations\hash_operations.hpp" />
     <ClInclude Include="noncopyable.hpp" />
     <ClInclude Include="redis_connection.hpp" />
@@ -160,7 +161,7 @@
     <ClInclude Include="port.hpp" />
     <ClInclude Include="operations\default_value_operations.hpp" />
     <ClInclude Include="operations\value_operations.hpp" />
-    <ClInclude Include="support\geo_point.hpp" />
+    <ClInclude Include="support\geo\geo_point.hpp" />
     <ClInclude Include="vivi_exception.hpp" />
   </ItemGroup>
   <ItemGroup>

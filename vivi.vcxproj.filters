@@ -81,7 +81,10 @@
     <ClInclude Include="operations\abstract_operations.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="support\geo_point.hpp">
+    <ClInclude Include="operations\geo_operations.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="support\geo\geo_point.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

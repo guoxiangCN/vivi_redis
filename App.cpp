@@ -2,8 +2,11 @@
 
 #include <string>
 #include "redis_template.hpp"
+#include "support/geo/geo_point.hpp"
+#include <map>
 
-USING_VIVI;
+USING_NAMESPACE_VIVI;
+USING_NAMESPACE_VIVI_GEO;
 
 
 auto test() {
@@ -14,6 +17,12 @@ auto test() {
 
 int main(int argc, char** argv)
 {
+
+	std::map<GeoPoint, int> xmap;
+	xmap.insert({ GeoPoint(1,2), 1999 });
+
+	GeoPoint x(1, 2);
+	// std::hash<GeoPoint>::_Do_hash(x);
 
 	std::function<void()> f = []() {
 
