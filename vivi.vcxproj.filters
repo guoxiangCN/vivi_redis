@@ -24,9 +24,6 @@
     <ClInclude Include="noncopyable.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="abstract_operations.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="vivi_exception.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -79,6 +76,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="operations\value_operations.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\abstract_operations.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="support\geo_point.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
