@@ -7,7 +7,7 @@
 #include "redis_string_commands.hpp"
 #include "redis_list_commands.hpp"
 #include "redis_set_commands.hpp"
-#include "redis_set_commands.hpp"
+#include "redis_zset_commands.hpp"
 #include "redis_hash_commands.hpp"
 #include "redis_geo_commands.hpp"
 #include "redis_pubsub_commands.hpp"

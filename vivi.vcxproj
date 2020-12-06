@@ -139,9 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="config\redis_configuration.hpp" />
+    <ClInclude Include="config\redis_standardalone_configuration.hpp" />
     <ClInclude Include="connection\redis_cluster_connection.hpp" />
     <ClInclude Include="connection\redis_connection_factory.hpp" />
     <ClInclude Include="connection\redis_sentinel_connection.hpp" />
+    <ClInclude Include="connection\socket_connection.hpp" />
     <ClInclude Include="operations\abstract_operations.hpp" />
     <ClInclude Include="commands\commands_defs.hpp" />
     <ClInclude Include="commands\redis_commands.hpp" />
@@ -167,8 +170,11 @@
     <ClInclude Include="operations\value_operations.hpp" />
     <ClInclude Include="support\data_type.hpp" />
     <ClInclude Include="support\geo_point.hpp" />
+    <ClInclude Include="support\geo_unit.hpp" />
     <ClInclude Include="support\host_and_port.hpp" />
     <ClInclude Include="support\named_node.hpp" />
+    <ClInclude Include="support\node_type.hpp" />
+    <ClInclude Include="support\redis_node.hpp" />
     <ClInclude Include="vivi_exception.hpp" />
   </ItemGroup>
   <ItemGroup>

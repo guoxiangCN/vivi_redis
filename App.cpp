@@ -7,10 +7,20 @@
 #include "support/geo_point.hpp"
 #include "support/host_and_port.hpp"
 #include "connection/redis_connection.hpp"
+#include "config/redis_standardalone_configuration.hpp"
 
 USING_NAMESPACE_VIVI;
 
 extern void Add(int a, int b);
+
+void testStandardalone() {
+	RedisStandaloneConfiguration config;
+	config.setHostName("localhost");
+	config.setPort(6379);
+	config.setDatabase(0);
+	config.setUsername("");
+	config.setPassword("");
+}
 
 
 auto test() {

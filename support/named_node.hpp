@@ -7,7 +7,7 @@
 NAMESPACE_VIVI_SUPPORT_BEGIN
 
 class NamedNode {
-public:
+protected:
 	NamedNode() {}
 	virtual ~NamedNode() {}
 	virtual std::string getName() = 0;
