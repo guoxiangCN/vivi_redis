@@ -27,9 +27,6 @@
     <ClInclude Include="vivi_exception.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="redis_connection.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="commands\redis_key_commands.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -84,12 +81,39 @@
     <ClInclude Include="operations\geo_operations.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="support\geo\geo_point.hpp">
+    <ClInclude Include="operations\default_geo_operations.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="support\geo_point.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="connection\redis_cluster_connection.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="connection\redis_connection_factory.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="connection\redis_sentinel_connection.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="connection\redis_connection.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="support\data_type.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="support\named_node.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="support\host_and_port.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="App2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

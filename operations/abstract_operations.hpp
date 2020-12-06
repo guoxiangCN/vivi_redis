@@ -1,10 +1,9 @@
 #ifndef __VIVI_ABSTRACT_OPERATIONS_HPP__
 #define __VIVI_ABSTRACT_OPERATIONS_HPP__
 
-#include "port.hpp"
-#include "vivi_exception.hpp"
-#include "redis_connection.hpp"
-// #include "redis_template.hpp"
+#include "../port.hpp"
+#include "../vivi_exception.hpp"
+#include "../connection/redis_connection.hpp"
 
 #include <memory>
 #include <functional>
@@ -15,20 +14,22 @@ template<typename K, typename V>
 class RedisTemplate;
 
 template<typename K, typename V>
-class AbsractOperations {
+class AbstractOperations {
 public:
 	
 	/*
 	 * Construct a AbstractOpertions with a weak_ptr to observer the RedisTemplate.
 	 */
-	AbsractOperations(std::weak_ptr<RedisTemplate<K, V>> wpRedisTemplate) : m_redisTempalte(wpRedisTemplate) {}
+	AbstractOperations(std::weak_ptr<RedisTemplate<K, V>> wpRedisTemplate) 
+		: m_redisTempalte(wpRedisTemplate) {}
 
 
 	/*
 	 * Get the smart pointer of RedisTemplate.
 	 * A exception will be throw if the oberserved RedisTemplate was out of lifecycle.
 	 */
-	std::shared_ptr<RedisTemplate<K, V>> getRedisTemplate() {
+	std::shared_ptr<RedisTemplate<K, V>> getRedisTemplate() 
+	{
 		auto sharedPtr = m_redisTempalte.lock();
 		if (!sharedPtr)
 		{
@@ -38,10 +39,11 @@ public:
 	}
 
 	/*
-	 * Execute a RedisAction given.
+	 * Execute a RedisAction.
 	 */
 	template<typename T>
-	T execute(std::function<T(RedisConnectionPtr)> redisAction, bool exposeConnection) {
+	T execute(std::function<T(RedisConnectionPtr)> redisAction, bool exposeConnection) 
+	{
 		auto rt = this->getRedisTemplate();
 		return rt->execute(redisAction, exposeConnection);
 	}

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -139,6 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="connection\redis_cluster_connection.hpp" />
+    <ClInclude Include="connection\redis_connection_factory.hpp" />
+    <ClInclude Include="connection\redis_sentinel_connection.hpp" />
     <ClInclude Include="operations\abstract_operations.hpp" />
     <ClInclude Include="commands\commands_defs.hpp" />
     <ClInclude Include="commands\redis_commands.hpp" />
@@ -153,19 +156,24 @@
     <ClInclude Include="commands\redis_string_commands.hpp" />
     <ClInclude Include="commands\redis_tx_commands.hpp" />
     <ClInclude Include="commands\redis_zset_commands.hpp" />
+    <ClInclude Include="operations\default_geo_operations.hpp" />
     <ClInclude Include="operations\geo_operations.hpp" />
     <ClInclude Include="operations\hash_operations.hpp" />
     <ClInclude Include="noncopyable.hpp" />
-    <ClInclude Include="redis_connection.hpp" />
+    <ClInclude Include="connection\redis_connection.hpp" />
     <ClInclude Include="redis_template.hpp" />
     <ClInclude Include="port.hpp" />
     <ClInclude Include="operations\default_value_operations.hpp" />
     <ClInclude Include="operations\value_operations.hpp" />
-    <ClInclude Include="support\geo\geo_point.hpp" />
+    <ClInclude Include="support\data_type.hpp" />
+    <ClInclude Include="support\geo_point.hpp" />
+    <ClInclude Include="support\host_and_port.hpp" />
+    <ClInclude Include="support\named_node.hpp" />
     <ClInclude Include="vivi_exception.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="App2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

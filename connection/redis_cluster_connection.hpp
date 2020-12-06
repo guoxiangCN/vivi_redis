@@ -1,0 +1,7 @@
+#ifndef __VIVI_REDIS_CLUSTER_CONNECTION_HPP__
+#define __VIVI_REDIS_CLUSTER_CONNECTION_HPP__
+
+
+
+
+#endif

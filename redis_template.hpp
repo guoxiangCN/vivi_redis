@@ -6,6 +6,7 @@
 #include "operations/hash_operations.hpp"
 #include "operations/value_operations.hpp"
 #include "operations/default_value_operations.hpp"
+#include "operations/default_geo_operations.hpp"
 
 #include <memory>
 #include <functional>
@@ -18,6 +19,8 @@ class RedisTemplate : public _VIVI_ noncopyable, public std::enable_shared_from_
 public:
 
 	std::shared_ptr<ValueOperations<K,V>> opsForValue();
+
+	std::shared_ptr<GeoOperations<K, V>> opsForGeo();
 
 	template<typename HK, typename HV>
 	std::shared_ptr<HashOperations<K, HK, HV>> opsForHash();
@@ -42,6 +45,13 @@ std::shared_ptr<HashOperations<K, HK, HV>> RedisTemplate<K, V>::opsForHash()
 {
 	// FIXME
 	return std::make_shared<>();
+}
+
+template<typename K, typename V>
+std::shared_ptr<GeoOperations<K,V>> RedisTemplate<K, V>::opsForGeo()
+{
+	auto x = this->shared_from_this();
+	return std::shared_ptr<GeoOperations<K,V>>(new DefaultGeoOperations<K,V>(x));
 }
 
 template<typename K, typename V>

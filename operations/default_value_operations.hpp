@@ -14,11 +14,11 @@ class RedisTemplate;
 
 
 template<typename K, typename V>
-class DefaultValueOperations : public _VIVI_ AbsractOperations<K,V>, public _VIVI_  ValueOperations<K,V> {
+class DefaultValueOperations : public _VIVI_ AbstractOperations<K,V>, public _VIVI_  ValueOperations<K,V> {
 public:
 
 	DefaultValueOperations(std::shared_ptr<RedisTemplate<K, V>> rt)
-		: AbsractOperations<K, V>(std::weak_ptr<RedisTemplate<K, V>>(rt)) {
+		: AbstractOperations<K, V>(std::weak_ptr<RedisTemplate<K, V>>(rt)) {
 
 	}
 

@@ -1,2 +1,4 @@
 C:\Users\YY\source\repos\vivi\Debug\vivi.exe
 C:\Users\YY\source\repos\vivi\Debug\vivi.pdb
+F:\github_projects\vivi_redis\Debug\vivi.exe
+F:\github_projects\vivi_redis\Debug\vivi.pdb

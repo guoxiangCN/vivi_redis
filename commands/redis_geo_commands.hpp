@@ -7,6 +7,7 @@
 #include <cstddef>
 
 NAMESPACE_VIVI_BEGIN
+USING_NAMESPACE_VIVI_SUPPORT;
 
 class RedisGeoCommands {
 public:
