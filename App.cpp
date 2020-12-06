@@ -8,6 +8,8 @@
 #include "support/host_and_port.hpp"
 #include "connection/redis_connection.hpp"
 #include "config/redis_standardalone_configuration.hpp"
+#include "config/redis_cluster_configuration.hpp"
+#include "config/redis_sentinel_configuratuion.hpp"
 
 USING_NAMESPACE_VIVI;
 
@@ -20,6 +22,15 @@ void testStandardalone() {
 	config.setDatabase(0);
 	config.setUsername("");
 	config.setPassword("");
+}
+
+void testCluster()
+{
+	RedisClusterConfiguration config;
+	config.setClusterNodes("127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003");
+	config.setMaxRedirects(10);
+	config.setPassword("");
+	config.setUsername("");
 }
 
 
@@ -58,7 +69,7 @@ int main(int argc, char** argv)
 	// std::hash<GeoPoint>::_Do_hash(x);
 
 	testHostAndPort();
-
+	testCluster();
 
 	try {
 		auto rawPtr = new RedisTemplate<std::string, std::string>();

@@ -48,8 +48,11 @@ public:
 		return m_type == NodeType::SLAVE;
 	}
 
-	// NO MEANINGS, just for std::set
-	bool operator<(const RedisNode& r);
+	bool operator<(const RedisNode& r) const
+	{
+		if (&r == this) return false;
+		return m_host < r.m_host || m_port < r.m_port || m_name < r.m_name;
+	}
 
 private:
 	std::string m_id;
@@ -60,11 +63,7 @@ private:
 	std::string m_masterId;
 };
 
-inline bool RedisNode::operator<(const RedisNode& r)
-{
-	// FIXME
-	return false;
-}
+
 
 NAMESPACE_VIVI_SUPPORT_END
 

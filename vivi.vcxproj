@@ -139,7 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="commons-pool\pooled_object.hpp" />
+    <ClInclude Include="config\redis_cluster_configuration.hpp" />
     <ClInclude Include="config\redis_configuration.hpp" />
+    <ClInclude Include="config\redis_sentinel_configuratuion.hpp" />
     <ClInclude Include="config\redis_standardalone_configuration.hpp" />
     <ClInclude Include="connection\redis_cluster_connection.hpp" />
     <ClInclude Include="connection\redis_connection_factory.hpp" />
@@ -164,6 +167,7 @@
     <ClInclude Include="operations\hash_operations.hpp" />
     <ClInclude Include="noncopyable.hpp" />
     <ClInclude Include="connection\redis_connection.hpp" />
+    <ClInclude Include="pool\pool_object_factory.hpp" />
     <ClInclude Include="redis_template.hpp" />
     <ClInclude Include="port.hpp" />
     <ClInclude Include="operations\default_value_operations.hpp" />
@@ -175,6 +179,7 @@
     <ClInclude Include="support\named_node.hpp" />
     <ClInclude Include="support\node_type.hpp" />
     <ClInclude Include="support\redis_node.hpp" />
+    <ClInclude Include="support\string_utils.hpp" />
     <ClInclude Include="vivi_exception.hpp" />
   </ItemGroup>
   <ItemGroup>

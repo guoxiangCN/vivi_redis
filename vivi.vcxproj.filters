@@ -114,16 +114,31 @@
     <ClInclude Include="connection\socket_connection.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="config\redis_standardalone_configuration.hpp">
+    <ClInclude Include="support\node_type.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="support\redis_node.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="support\string_utils.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\pool_object_factory.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config\redis_cluster_configuration.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="config\redis_configuration.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="support\node_type.hpp">
+    <ClInclude Include="config\redis_sentinel_configuratuion.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="support\redis_node.hpp">
+    <ClInclude Include="config\redis_standardalone_configuration.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commons-pool\pooled_object.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -10,10 +10,10 @@
 
 NAMESPACE_VIVI_BEGIN
 
-/*
- * RedisStandaloneConfiguration do not support dynamic database switch, the
- * database must be specified in the config.
- */
+	/*
+	 * RedisStandaloneConfiguration do not support dynamic database switch, the
+	 * database must be specified in the config.
+	 */
 	class RedisStandaloneConfiguration : public RedisConfiguration,
 	public WithHostAndPort, public WithPassword, public WithDatabaseIndex {
 	public:

@@ -54,7 +54,7 @@ protected:
 
 class SentinelConfiguration : public WithDatabaseIndex, public WithPassword {
 public:
-	virtual void setMaster(const NamedNode &master) = 0;
+	virtual void setMaster(const NamedNode& master) = 0;
 	virtual NamedNode getMaster() = 0;
 	virtual std::set<RedisNode> getSentinels() = 0;
 	virtual std::string getDataNodeUsername() { return this->getUsername(); }
@@ -86,7 +86,7 @@ protected:
 	virtual ~RedisConfiguration() = default;
 };
 
-NAMESPACE_VIVI_END	
+NAMESPACE_VIVI_END
 
 
 #endif
